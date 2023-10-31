@@ -33,7 +33,7 @@ try:
     go_button = WebDriverWait(driver, 5).until(
         EC.element_to_be_clickable((By.CLASS_NAME, "start-text"))
     )
-``  
+
     print("Going to click GO")
     go_button.click()
     print("clicked GO")
