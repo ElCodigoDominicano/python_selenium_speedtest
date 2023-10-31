@@ -16,7 +16,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-URL: str = 'https://www.speedtest.net
+URL: str = 'https://www.speedtest.net'
 print("Welcome please wait while we set things up for you..")
 driver: WebDriver = webdriver.Firefox()
 print(f"driver has been set, opening webpage {URL}.")
