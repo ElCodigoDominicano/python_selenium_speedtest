@@ -38,12 +38,12 @@ try:
     go_button.click()
     print("clicked GO")
     
-    print("going to wait 40-seconds for speed-test to finish")
+    print("going to Sleep for 40-seconds to let speed-test finish")
     time.sleep(40)
-    # The speedtest data is in this tag => <div classnamw='speedtest_container'>
+    
+    # The speedtest data is in this tag => <div classname='speedtest_container'>
     # it is grabbing element via its XML/XHTML XPath.
     # prints out all data containing the speedtest_container
-    
     speedtest_container = WebDriverWait(driver, 40).until(
         EC.visibility_of_element_located((By.XPATH, "/html/body/div[3]/div/div[3]/div/div/div/div[2]/div[3]/div[3]/div/div[3]/div/div/div[2]"))
     )
