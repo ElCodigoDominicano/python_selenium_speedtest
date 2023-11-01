@@ -1,4 +1,8 @@
 """
+    a simple speedtest bot using selenium.
+    Note: it isn't fully implemented to handle errors 
+    such as network issues, using wrong website
+    
     need to click "Go"
     the "Go"'s element is in a: <span class="start-text"></span>
     
@@ -8,8 +12,8 @@
 
     the element below contains the speedtest RPM guage
     <div class="guage-speed-needle">
-
-    a simple speedtest bot using selenium 
+    
+    https://www.speedtest.net
     @elcodigodominicano
 """
 import time
@@ -33,7 +37,7 @@ try:
     go_button = WebDriverWait(driver, 5).until(
         EC.element_to_be_clickable((By.CLASS_NAME, "start-text"))
     )
-
+    
     print("Going to click GO")
     go_button.click()
     print("clicked GO")
